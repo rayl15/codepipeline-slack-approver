@@ -23,4 +23,4 @@ artifacts:
   - $INPUT_FILE
   - $OUTPUT_FILE
   - $CONFIG_FILE
-  discard-paths: yes
+  discard-paths: no
