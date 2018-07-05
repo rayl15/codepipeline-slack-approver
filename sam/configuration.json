@@ -1,0 +1,13 @@
+{
+    "Parameters": {
+        "AppName": "SlacktoCodePipeline",
+        "SlackChannel": "deployments",
+        "SlackWebHookUrl": "https://hooks.slack.com/services/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",
+        "SlackVerficationToken": "WeGetThisFromCodeBuildViaSSM",
+        "KmsKeyArnForLambda": "arn:aws:kms:ap-southeast-2:531203146738:key/19b5a39f-fd7b-4f6b-8945-9fe92236fc4b",
+        "SNSTopicArnFromCodePipeline": ""
+    },
+    "Tags": {
+		"app-name": "cp-slack-approver"
+    }
+}

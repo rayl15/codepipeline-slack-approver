@@ -1,0 +1,26 @@
+version: 0.2
+  #AWS CodeBuild
+env:
+  variables:
+    INPUT_FILE: sam/template.yaml
+    CONFIG_FILE: sam/configuration.json
+    OUTPUT_FILE: output-sam.yaml
+  parameter-store:
+    #Precreated parameter for Slack Interactive Token
+    SLACK_TOKEN: /CodeBuild/SLACK_TOKEN
+phases:
+  install:
+    commands:
+    - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template $OUTPUT_FILE
+  # prebuild:
+  build:
+    commands:
+    - sed -i -e "s/WeGetThisFromCodeBuildViaSSM/$SLACK_TOKEN/g" "$CONFIG_FILE"
+  # postbuild:
+
+artifacts:
+  files:
+  - $INPUT_FILE
+  - $OUTPUT_FILE
+  - $CONFIG_FILE
+  discard-paths: yes
