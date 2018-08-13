@@ -1,10 +1,10 @@
 {
     "Parameters": {
         "AppName": "SlacktoCodePipeline",
-        "SlackChannel": "deployments",
-        "SlackWebHookUrl": "https://hooks.slack.com/services/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",
-        "SlackVerficationToken": "WeGetThisFromCodeBuildViaSSM",
-        "KmsKeyArnForLambda": "arn:aws:kms:ap-southeast-2:531203146738:key/19b5a39f-fd7b-4f6b-8945-9fe92236fc4b",
+        "SlackChannel": "webtest",
+        "SlackWebHookUrl": "https://hooks.slack.com/services/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",
+        "SlackVerficationToken": "JiNiSYdbuYhJsW4gTcvkCJgm",
+        "KmsKeyArnForLambda": "arn:aws:kms:us-east-1:802977414220:key/fe0f6c3c-4f32-4516-93fc-f8196abc7d1f",
         "SNSTopicArnFromCodePipeline": ""
     },
     "Tags": {
