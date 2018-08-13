@@ -22,6 +22,7 @@ Parameters:
   KmsKeyArnForLambda:
     Type: String
     Description: KMS Key ARN to Encrypt Environment Variables
+    Default: "arn:aws:kms:us-east-1:802977414220:key/fe0f6c3c-4f32-4516-93fc-f8196abc7d1f"
 
   SNSTopicArnFromCodePipeline:
     Type: String
